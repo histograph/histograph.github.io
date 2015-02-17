@@ -1,0 +1,30 @@
+- name: type
+  relations:
+    - identical
+    - unrelated
+    - contains
+    - in
+
+- name: geometry
+  relations:
+    - identical
+    - contains
+    - in
+    - intersects
+
+- name: period
+  relations:
+    - identical
+    - before
+    - after
+    - contains
+    - in
+    - intersects
+
+- name: concept
+  relations:
+    - identical
+    - unrelated
+    - contains
+    - in
+    - intersects

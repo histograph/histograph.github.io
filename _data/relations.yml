@@ -1,0 +1,22 @@
+- uri: hg:sameAs
+  atomic:
+    - hga:conceptIdentical
+    - hga:typeIdentical
+
+- uri: hg:absorbed
+  atomic:
+    - hga:conceptIn
+    - hga:periodBefore
+    - hga:typeIdentical
+    - hga:geometryIntersects
+
+#- uri: hg:originated
+
+- uri: hg:isUsedFor
+  atomic:
+    - hga:conceptIdentical
+    - hga:typeIdentical
+
+- uri: hg:liesIn
+  atomic:
+    - hga:geometryIntersects
