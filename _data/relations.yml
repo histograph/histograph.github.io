@@ -3,7 +3,7 @@
     - hga:conceptIdentical
     - hga:typeIdentical
 
-- uri: hg:absorbed
+- uri: hg:absorbedBy
   atomic:
     - hga:conceptIn
     - hga:periodBefore
