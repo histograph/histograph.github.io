@@ -3,9 +3,6 @@
 
 ## Histograph
 
-{% include_relative images/architecture.svg %}
-
-
 ### Place-in-Time
 
 <table class="u-full-width">
