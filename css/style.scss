@@ -81,19 +81,17 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'BreeSerif-Regular';
-  src: url("{{ site.baseurl }}/fonts/BreeSerif-Regular.otf");
-  font-weight: 800;
-  font-style: italic;
-}
-
-
 /* Style
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 30px 0;
+}
+
+#logo {
+  height: 90px;
+  padding-right: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -118,5 +116,63 @@ table.no-borders tbody tr:first-child {
 
 table.no-borders tr.border-bottom {
   border-bottom: 1px solid black;
+}
+
+#architecure ol,
+#architecure svg {
+  height: 1334px;
+}
+
+#architecure ol {
+  position: absolute;
+  float: left;
+  width: calc(960px - 540px);
+  list-style-type: none;
+}
+
+#architecure li {
+  position: absolute;
+}
+
+#architecure ol h6 {
+  margin-bottom: 1rem;
+}
+
+#architecure ol p {
+  margin-bottom: 1rem;
+}
+
+#architecure svg {
+  float: right;
+}
+
+
+#arch-li-layer-data {
+  top: 10px;
+}
+
+#arch-li-io {
+  top: 455px;
+}
+
+#arch-li-queue {
+  top: 585px;
+}
+
+#arch-li-core {
+  top: 749px;
+}
+
+#arch-li-api {
+  top: 1059px;
+}
+
+#arch-li-viewer {
+  top: 1197px;
+}
+
+
+.clear {
+  clear: both;
 }
 

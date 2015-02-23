@@ -1,7 +1,47 @@
 ---
 ---
 
-## Histograph
+<h1><img src="{{ site.baseurl }}/images/histograph.svg" id="logo" />Histograph</h1>
+
+<div id="architecure">
+  <ol>
+
+    <li id="arch-li-layer-data">
+      <h6>Layer data</h6>
+      <p><a href="https://github.com/histograph/io/tree/master/schemas">NDJSON schemas</a></p>
+    </li>
+
+    <li id="arch-li-io">
+      <h6>Histograph IO</h6>
+      <p><a href="https://github.com/histograph/io">GitHub</a></p>
+    </li>
+
+    <li id="arch-li-queue">
+      <h6>Message Queue</h6>
+      <p>Redis</p>
+    </li>
+
+    <li id="arch-li-core">
+      <h6>Histograph Core</h6>
+      <p><a href="https://github.com/histograph/core">GitHub</a></p>
+    </li>
+
+    <li id="arch-li-api">
+      <h6>Histograph API</h6>
+      <p><a href="https://github.com/histograph/api">GitHub</a></p>
+    </li>
+
+    <li id="arch-li-viewer">
+      <h6>Histograph Viewer</h6>
+      <p><a href="https://github.com/histograph/viewer">GitHub</a></p>
+    </li>
+
+
+  </ol>
+  {% include architecture.svg %}
+  <div class="clear"></div>
+</div>
+
 
 ### Place-in-Time
 
