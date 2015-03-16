@@ -1,0 +1,32 @@
+<header>
+  <nav>
+    <div class="container">
+      <div class="row">
+        <div class="four columns">
+          <a href="{{ site.baseurl }}/" id="logo">
+            <img src="{{ site.baseurl }}/images/histograph.svg" width="100px">
+          </a>
+        </div>
+        <div class="eight columns">
+          <ul>
+            {% for item in site.data.menu %}
+            <li>
+              {% assign url = page.url | replace_first:'/','' | split:"/" | first %}
+              {% if item.name == url %}
+              <a class="menu-item current" href="{{ site.baseurl }}/{{ item.name }}">
+              {% else %}
+              <a class="menu-item" href="{{ site.baseurl }}/{{ item.name }}">
+              {% endif %}
+                {{item.title}}</a>
+            </li>
+            {% endfor %}
+            <li><a id="github-nav" href="https://github.com/histograph/">
+              <span class="octocat"></span>GitHub
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+

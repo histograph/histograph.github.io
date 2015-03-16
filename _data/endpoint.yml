@@ -1,0 +1,162 @@
+title       : CitySDK Linked Data API
+instance    : Amsterdam
+endpoint    : http://api.citysdk.waag.org/
+github      : https://github.com/waagsociety/citysdk-ld
+wiki		    : https://github.com/waagsociety/citysdk-ld/wiki
+organization: Waag Society
+homepage    : http://waag.org/en
+email       : citysdk@waag.org
+data-links  :
+  json-ld : "http://json-ld.org/playground/index.html#startTab=tab-normalized&json-ld="
+  geojson : "http://geojson.io/#data=data:text/x-url,"
+map         :
+  zoom    : 10
+  geometry:
+    lat: 52.35
+    lon: 5.39
+tiles       : http://otile2.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png
+
+datasets    :
+  - url  : http://gtfs.ovapi.nl/
+    title: GTFS - public transport schedules and real-time data
+
+  - url  : http://www.amsterdam.nl/gemeente/organisatie-diensten/ivv/
+    title: Amsterdam infrastructure and transportation data
+
+  - url  : http://www.kadaster.nl/bag
+    title: Dutch address, postcode and building data
+
+  - url  : http://download.geofabrik.de/europe/netherlands.html
+    title: OpenStreetMap
+
+
+endpoints:
+  - title: Amsterdam
+    coordinates:
+      - 52.367
+      - 4.915
+    apis:
+      - linked-data  : http://citysdk.waag.org
+
+  - title: Helsinki
+    coordinates:
+      - 60.1664
+      - 24.9436
+    apis:
+      - linked-data  : http://144.76.172.136/
+        participation: http://dev.hel.fi/apis/issuereporting
+
+  - title: Lamia
+    coordinates:
+      - 38.8956
+      - 22.4349
+    apis:
+      - participation: https://participation.citysdk.lamia-city.gr/rest
+
+  - title: Province of Rome
+    coordinates:
+      - 41.8932
+      - 12.4832
+    apis:
+      - linked-data  : http://dev.citysdk-mobility.provincia.roma.it
+
+  - title: Istanbul
+    coordinates:
+      - 41.0096
+      - 28.9670
+    apis:
+      - linked-data  : http://devcitysdk.ibb.gov.tr
+
+  - title: Manchester
+    coordinates:
+      - 53.47908
+      - -2.24455
+    apis:
+      - linked-data  : http://dev.citysdk.futureeverything.org/
+
+  - title: Lisbon
+    coordinates:
+      - 38.718
+      - -9.138
+    apis:
+      - tourism: http://tourism.citysdk.eu/
+
+apps:
+  - name       : buildings
+    title      : "All 9,866,539 buildings in the Netherlands"
+    url        : http://code.waag.org/buildings/
+    description: "Map showing all 9,866,539 buildings in the Netherlands, shaded according to their year of construction."
+
+  - name       : mansholt
+    title      : Agricutural land use in the Netherlands
+    url        : https://code.waag.org/mansholt/
+    description: "Interactive map, made for an installation on an exhibition on Sicco Mansholt, European Agricultural policy and its influence on land use."
+
+  - name       : parking-widget
+    title      : Parking Widget Amsterdam
+    url        : http://parkeerwidget.yume.nl/widget/
+    description: "This widget gives travellers to Amsterdam insight in the associated travel time and costs for the last mile to destination for different parking options in the city."
+
+  - name       : parking-api
+    title      : Parking API Amsterdam
+    url        : http://divvapi.parkshark.nl/
+    description: "This API will return costs and recommendations for visiting any destination in Amsterdam."
+
+  - name       : parking-api-github
+    title      : Source Code for Parking API Amsterdam
+    url        : https://github.com/jonathanrcarter/divv-amsterdam-parkingapi
+    description: "Source code on GitHub for Parking API."
+
+  - name       : city-navigator
+    title      : City Navigator
+    url        : http://dev.hsl.fi/navigator-proto/
+    description: "HSL Navigator is a fully open-source service based solely on open data."
+
+  - name       : tree-spotter
+    title      : Tree Spotter
+    url        : http://bomenapp.nl/
+    description: "Mobile app which shows details about trees in Dutch cities, for iOS and Android."
+
+  - name       : verbeter-de-buurt
+    title      : Verbeter de Buurt
+    url        : http://www.verbeterdebuurt.nl/
+    description:  "Apps like Verbeter de Buurt and <a href='http://www.buurtvitaal.nl/'>Buurt Vitaal</a> generate data for the CitySDK LD API by collecting citizen reports and publicizing these via an Open311 interface."
+
+  - name       : penalty-radar
+    title      : Penalty Radar
+    url        : http://boeteradar.2coolmonkeys.nl/
+    description: "Penalty Radar shows speeds on Dutch highways, and calculates the fines that could have been collected by police."
+
+  # - name       : city-dashboard
+  #   title      : City Dashboard
+  #   url        : http://citydashboard.waag.org
+  #   description: "The City Dashboard shows the heartbeat of Amsterdam, by showing real-time and aggregated data streams."
+  #
+  # - name       : now
+  #   title      : Now
+  #   url        : http://code.waag.org/now/
+  #   description: "A simple public transport demo, built on top of the GTFS data. Now finds the 4 closest public transport stops, and shows real-time departure time information about those stops."
+  #
+  # - name       : globe
+  #   title      : Open Data Globe
+  #   url        : http://citysdk.waag.org/visualisation/
+  #   description: "The dynamics of European cities are made visible in the Open Data Globe, based on datasets in the CitySDK LD API."
+
+examples    :
+  - url  : layers/parking.garage/objects?per_page=25
+    title: Real-time parking capacity in Amsterdam
+
+  - url  : layers/bag.pand/objects
+    title: Buildings in the Netherlands
+
+  - url  : layers/gtfs.routes/objects?in=admr.nl.amsterdam
+    title: Public transport routes in Amsterdam
+
+  - url  : layers/bag.ligplaats/objects?in=admr.nl.amsterdam
+    title: House boats in Amsterdam
+
+  - url  : layers/cbs/objects?per_page=25&in=admr.nl.amsterdam
+    title: Dutch demographic and statistics
+
+  - url  : objects?osm::tourism=museum&in=admr.nl.leiden
+    title: OpenStreetMap museums in Leiden

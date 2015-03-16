@@ -1,0 +1,20 @@
+- name:
+  title: Histograph
+
+- name: viewer
+  title: Viewer
+
+- name: concepts
+  title: Concepts
+
+- name: architecture
+  title: Architecture
+
+# - name: docs
+#   title: Docs
+#
+# - name: apps
+#   title: Apps
+#
+# - name: data
+#   title: Data

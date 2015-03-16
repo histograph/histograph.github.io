@@ -1,12 +1,7 @@
 ---
 ---
 
-<h1><img src="{{ site.baseurl }}/images/histograph.svg" id="logo" />Histograph</h1>
-
-<div id="architecure">
-  {% include architecture.svg %}
-</div>
-
+__DRAFT!__
 
 ### Place-in-Time
 
