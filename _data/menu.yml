@@ -10,6 +10,9 @@
 - name: viewer
   title: Viewer
 
+- name: apps
+  title: Apps
+
 - name: concepts
   title: Concepts
 
