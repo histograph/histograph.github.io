@@ -14,10 +14,10 @@ __DRAFT!__
   </thead>
   <tbody>
     <tr>
-      <td>ID</td><td>Identifier</td>
+      <td>HGID</td><td>Histograph identifier</td>
     </tr>
     <tr>
-      <td>Layer</td><td>Data layer</td>
+      <td>Source</td><td>Data source</td>
     </tr>
     <tr>
       <td>Name</td><td>String term from source</td>

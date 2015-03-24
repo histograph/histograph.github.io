@@ -1,6 +1,12 @@
 - name:
   title: Histograph
 
+- name: data
+  title: Data
+
+- name: docs
+  title: Docs
+
 - name: viewer
   title: Viewer
 
