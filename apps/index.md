@@ -1,13 +1,17 @@
 ---
 ---
 
-__DRAFT!__
-
 ### Plaatsnamen Standaardiseren
 
 [http://locatienaaruri.erfgeo.nl/](http://locatienaaruri.erfgeo.nl/)
 
 [![](plaatsnamen-standaardiseren.jpg)](http://locatienaaruri.erfgeo.nl/)
+
+### Geothesaurus
+
+[http://erfgeo.nl/geothesaurus/](http://erfgeo.nl/geothesaurus/)
+
+[![](geothesaurus.jpg)](http://erfgeo.nl/geothesaurus/pit/atlas-verstedelijking/Deventer_1350)
 
 ### Names-in-Time
 
