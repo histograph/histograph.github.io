@@ -18,3 +18,9 @@
 [http://www.islandsofmeaning.nl/projects/names-in-time/](http://www.islandsofmeaning.nl/projects/names-in-time/)
 
 [![](names-in-time.jpg)](http://www.islandsofmeaning.nl/projects/names-in-time/)
+
+### Atlas van de Verstedelijking
+
+[http://nieneb.github.io/verstedelijking/](http://nieneb.github.io/verstedelijking/)
+
+[![](verstedelijking.jpg)](http://nieneb.github.io/verstedelijking/)
