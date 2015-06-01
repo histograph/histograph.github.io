@@ -1,44 +1,21 @@
 ---
+d3: true
 ---
+<ul id="sources">
+</ul>
 
-__DRAFT!__
+<script>
+d3.json('{{ site.data.api.endpoint}}sources', function(json) {
+  var source = d3.select('#sources').selectAll('li').data(json)
+      .enter().append('li');
 
-###### Atlas der Verstedelijking
+  source.append('h5').html(function(d) {
+    return d.title;
+  });
 
-###### Basisregistraties Adressen en Gebouwen
+  source.append('p').html(function(d) {
+    return d.description;
+  });
 
-###### Getty Thesaurus of Geographical Names
-
-###### DBpedia
-
-###### Geonames
-
-###### OpenStreetMap
-
-###### Pleiades
-
-###### Gemeentegeschiedenis
-
-###### Graafschappen
-
-###### Illustre Lieve Vrouwe Broederschap
-
-###### Leidse Straten
-
-###### Militieregisters
-
-###### Nationaal Wegenbestand
-
-###### Poorterboeken
-
-###### CBS Provincies
-
-###### Simon Hart-lijsten
-
-###### Carnaval!
-
-###### Franse Gewesten
-
-###### Verdwenen Dorpen
-
-###### VOC Opvarenden
+});
+</script>
