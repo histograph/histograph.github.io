@@ -1,29 +1,23 @@
 - name:
   title: Histograph
 
+- name: concepts
+  title: Concepts
+
 - name: data
   title: Data
-
-- name: docs
-  title: Docs
 
 - name: viewer
   title: Viewer
 
-- name: apps
-  title: Apps
+- name: installation
+  title: Installation
 
-- name: concepts
-  title: Concepts
+- name: api
+  title: API
 
 - name: architecture
   title: Architecture
 
-# - name: docs
-#   title: Docs
-#
-# - name: apps
-#   title: Apps
-#
-# - name: data
-#   title: Data
+- name: apps
+  title: Apps
