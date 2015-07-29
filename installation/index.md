@@ -26,6 +26,8 @@ Histograph currently expects Neo4j server to run without authentication. You can
 With a Homebrew-installed Neo4j, this file is located here:
 
     /usr/local/Cellar/neo4j/:version/libexec/conf/neo4j-server.properties
+In debian it is found here:
+    /etc/neo4j
 
 ### Histograph Neo4j plugin
 
@@ -37,7 +39,7 @@ cd neo4j-plugin
 ./install.sh
 {% endhighlight %}
 
-Or, if this script does not work, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j.
+This script is for OSX, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j. Plugin under debian is at /usr/share/neo4j
 
 ## Elasticsearch
 
