@@ -28,6 +28,7 @@ With a Homebrew-installed Neo4j, this file is located here:
     /usr/local/Cellar/neo4j/:version/libexec/conf/neo4j-server.properties
 
 In debian you will find it here:
+
     `/etc/neo4j`
 
 ### Histograph Neo4j plugin
@@ -42,7 +43,8 @@ cd neo4j-plugin
 
 This script is for OSX, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j. 
 
-In a debian install, the plugin is at:
+In a debian install, the plugin directory is at:
+
   `/usr/share/neo4j`
 
 ## Elasticsearch
