@@ -10,9 +10,9 @@ Enter Histograph: a historical geocoder for search and standardization of place 
 #### Examples
 
 - [Hengelo, Overijssel and Hengelo, Gelderland](viewer#search=hengelo)
-- [Places on the sea](viewer#search="aan zee" type=hg:Plaats)
+- [Places on the sea](viewer#search="*zee" type=hg:Place)
 - [Coriovallum, Heerlen's Roman name](viewer#search=coriovallum)
-- [Municipality of Leeuwarden](viewer#search=leeuwarden%20type=hg:Gemeente)
+- [Municipality of Leeuwarden](viewer#search=leeuwarden%20type=hg:Municipality)
 
 [![](images/screenshot.jpg)](viewer#search=hoorn)
 
