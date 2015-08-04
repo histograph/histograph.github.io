@@ -27,7 +27,11 @@ cd neo4j-plugin
 ./install.sh
 {% endhighlight %}
 
-This script is for OSX, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j. Plugin under debian is at /usr/share/neo4j
+This script is for OSX, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j.
+
+In a Debian install, the plugin directory is at:
+
+    /usr/share/neo4j
 
 ## Elasticsearch
 
