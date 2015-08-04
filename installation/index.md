@@ -31,7 +31,9 @@ This script is for OSX, on other systems, run `mvn package` yourself to build th
 
 In a Debian install, the plugin directory is at:
 
-    /usr/share/neo4j
+{% highlight bash %}
+/usr/share/neo4j
+{% endhighlight %}
 
 ## Elasticsearch
 
@@ -47,7 +49,9 @@ Currently, Histograph does not create its own mappings. Please put Histograph's 
 
 With Homebrew, this file is located here:
 
-    /usr/local/Cellar/elasticsearch/:version/config
+{% highlight bash %}
+/usr/local/Cellar/elasticsearch/:version/config
+{% endhighlight %}
 
 Download `default-mapping.json` from GitHub, and copy the file:
 
@@ -58,11 +62,11 @@ mv default-mapping.json /usr/local/Cellar/elasticsearch/:version/config
 
 And, add the following lines to `elasticsearch.yml`:
 
-```yml
+{% highlight yaml %}
 index.analysis.analyzer.lowercase:
   filter: lowercase
   tokenizer: keyword
-```
+{% endhighlight %}
 
 ## Redis
 
@@ -77,13 +81,13 @@ All Histograph components depend on the [histograph-config](https://github.com/h
 1. Start the Histograph module with the argument `--config path/to/config.yml`
 2. Set the `HISTOGRAPH_CONFIG` environment variable to the path of the configuration file:
 
-```bash
+{% highlight bash %}
 export HISTOGRAPH_CONFIG=/Users/bert/code/histograph/config/histograph.bert.yml
-```
+{% endhighlight %}
 
 This configuration file should at least specify the following options:
 
-```yml
+{% highlight yaml %}
 api:
   dataDir: /etc/histograph/data   # Directory where API stores data files.
   admin:
@@ -98,7 +102,7 @@ import:
   dirs:
     - ../data                     # List of directories containing Histograph
     - ...                         # datasets - used by import tool
-```
+{% endhighlight %}
 
 Please see the [histograph-config](https://github.com/histograph/config) repository on GitHub to see the default options specified by `histograph.default.yml`.
 
@@ -106,10 +110,12 @@ Please see the [histograph-config](https://github.com/histograph/config) reposit
 
 Histograph Core reads messages from Redis, and syncs Neo4j and Elasticsearch.
 
-    git clone https://github.com/histograph/core.git
-    cd core
-    npm install
-    node index.js
+{% highlight bash %}
+git clone https://github.com/histograph/core.git
+cd core
+npm install
+node index.js
+{% endhighlight %}
 
 You can specify the location of your configuration file by specifying its location using the `--config` argument, or by setting the `HISTOGRAPH_CONFIG` environment variable.
 
@@ -117,10 +123,12 @@ You can specify the location of your configuration file by specifying its locati
 
 Histograph API exposes a search API, as well as an API to upload and download datasets. The search API reads from Elasticsearch and Neo4j; the dataset API allows users to upload datasets, reads NDJSON files and writes messages to the Redis queue.
 
-    git clone https://github.com/histograph/api.git
-    cd api
-    npm install
-    node index.js
+{% highlight bash %}
+git clone https://github.com/histograph/api.git
+cd api
+npm install
+node index.js
+{% endhighlight %}
 
 API can also be started with the `--config` command line argument.
 
@@ -136,10 +144,12 @@ A Histograph dataset consists of a directory containing three files: two NDJSON 
 
 To use Histograph Data to download and compile a default set of Histograph NDJSON files, do the following:
 
-    git clone https://github.com/histograph/data.git
-    cd data
-    npm install
-    node index.js tgn geonames
+{% highlight bash %}
+git clone https://github.com/histograph/data.git
+cd data
+npm install
+node index.js tgn geonames
+{% endhighlight %}
 
 ### Import data
 
@@ -159,10 +169,12 @@ For example, the GeoNames dataset looks like this:
 
 To download and run histograph-import, do the following:
 
-    git clone https://github.com/histograph/import.git
-    cd import
-    npm install
-    node index.js tgn geonames ...
+{% highlight bash %}
+git clone https://github.com/histograph/import.git
+cd import
+npm install
+node index.js tgn geonames ...
+{% endhighlight %}
 
 Without specifying one or more datasets as command line arguments, running `node indes.js` will import _all_ available datasets.
 
@@ -172,13 +184,15 @@ By default, the [`histograph-schemas`](https://github.com/histograph/schemas) mo
 
 You can create your own ontology and specify your own PIT types and relations, by cloning the histograph-schemas repository:
 
-    git clone https://github.com/histograph/schemas
-    cd schemas
-    npm install
+{% highlight bash %}
+git clone https://github.com/histograph/schemas
+cd schemas
+npm install
+{% endhighlight %}
 
 The most important file in this repository is `histograph.ttl`, the Histograph ontology. This file contains all types and relations used by Histograph Core, API and import scripts. You can edit the ontology and add your own types and relations, and run `node schemas-from-ontology.js` afterwards to create JSON schemas from the changed ontology. Finally, you will need to specify the absolute path to the `index.js` file in the cloned repository in your user configuration YAML file:
 
-```yml
+{% highlight yaml %}
 schemas:
   module: path/to/custom-schemas-repository/index.js
-```
+{% endhighlight %}
