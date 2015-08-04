@@ -17,18 +17,6 @@ This document explains how to install and configure all the essential components
 
     brew install neo4j
 
-### Configuration
-
-Histograph currently expects Neo4j server to run without authentication. You can disable authentication by editing `neo4j-server.properties`, and adding the following line:
-
-    dbms.security.auth_enabled=false
-
-With a Homebrew-installed Neo4j, this file is located here:
-
-    /usr/local/Cellar/neo4j/:version/libexec/conf/neo4j-server.properties
-In debian it is found here:
-    /etc/neo4j
-
 ### Histograph Neo4j plugin
 
 Histograph depends on a [server plugin](https://github.com/histograph/neo4j-plugin) for some of its graph queries. You can install this plugin like this:
@@ -51,25 +39,26 @@ Install [Elasticsearch](https://www.elastic.co/downloads/elasticsearch). With Ho
 
 ### Configuration
 
-Enable CORS, add the following lines to `elasticsearch.yml`, in the `config` directory of your Elasticsearch installation:
-
-{% highlight yaml %}
-http.cors.enabled: true
-http.cors.allow-origin: "*"
-http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
-http.cors.allow-headers: X-Requested-With,X-Auth-Token,Content-Type, Content-Length
-{% endhighlight %}
+Currently, Histograph does not create its own mappings. Please put Histograph's `default-mapping.json` in  the `config` directory of your Elasticsearch installation.
 
 With Homebrew, this file is located here:
 
     /usr/local/Cellar/elasticsearch/:version/config
 
-Afterwards, put Histograph's `default-mapping.json` in the `config` directory, too:
+Download `default-mapping.json` from GitHub, and copy the file:
 
 {% highlight bash %}
 wget https://raw.githubusercontent.com/histograph/schemas/graphmalizer/elasticsearch/default-mapping.json
 mv default-mapping.json /usr/local/Cellar/elasticsearch/:version/config
 {% endhighlight %}
+
+And, add the following lines to `elasticsearch.yml`:
+
+```yml
+index.analysis.analyzer.lowercase:
+  filter: lowercase
+  tokenizer: keyword
+```
 
 ## Redis
 
@@ -77,52 +66,37 @@ With Homebrew `brew install redis`, [redis.io](http://redis.io/download) otherwi
 
 ## Histograph
 
-### Schemas
-
-First of all, create a directory somewhere to contain all Histograph runtime and configuration files. Now, we can start by downloading the schemas repository, which contains Histograph's configurable data model:
-
-    git clone https://github.com/histograph/schemas
-    npm install
-
-The most important file in this repository is `histograph.ttl`, the Histograph ontology. This file contains all types and relations used by Histograph Core, API and import scripts. You can edit the ontology and add your own types and relations, and run `node schemas-from-ontology.js` afterwards to create JSON schemas from the changed ontology.
-
 ### Configuration
 
-All Histograph components depend on a single JSON configuration file, and expect the environment variable `HISTOGRAPH_CONFIG` to contain the absolute path to this file:
+All Histograph components depend on the [histograph-config](https://github.com/histograph/config) module, which  specifies a set of (overridable) default options. However, some options must always be specified manually: histograph-config loads the default configuration from [`histograph.default.yml`](https://github.com/histograph/config/blob/master/histograph.default.yml) and merges this with a required user-specified configuration file. You can specify the location of your own configuration file in two ways:
 
-    git clone https://github.com/histograph/config
-    cd config
-    cp histograph.example.json histograph.json
-    export HISTOGRAPH_CONFIG=path/to/config/histograph.json
+1. Start the Histograph module with the argument `--config path/to/config.yml`
+2. Set the `HISTOGRAPH_CONFIG` environment variable to the path of the configuration file:
 
-Before running Histograph, you will need to change some parts of `histograph.json`:
+```bash
+export HISTOGRAPH_CONFIG=/Users/bert/code/histograph/config/histograph.bert.yml
+```
 
-{% highlight js %}
-{
-  "api": {
-    "protocol": "http",
-    "host": "localhost",                // localhost, or hostname of server.
-    "dataDir":
-        "/usr/local/histograph/data",   // Directory where API stores data files.
-    "externalPort": 80,
-    "internalPort": 3000,
-    "admin": {
-      "name": "histograph",             // Default Histograph user, is created
-      "password": "Your password!! 🚜"  //   when starting API the first time.
-    }
-  },
-  "import": {
-    "dirs": [
-      "../data",                        // List of directories containing
-      "..."                             //   Histograph datasets.
-    ]
-  },
-  "schemas": {
-    "dir":
-        "/usr/local/histograph/schemas" // Absolute or relative path to
-  }                                     //  Histograph schemas.
-}
-{% endhighlight %}
+This configuration file should at least specify the following options:
+
+```yml
+api:
+  dataDir: /etc/histograph/data   # Directory where API stores data files.
+  admin:
+    name: histograph              # Default Histograph user, is created
+    password: passw🚜rd           # when starting API the first time.
+
+neo4j:
+  user: neo4j                     # Neo4j authentication (leave empty when
+  password: password              # running Neo4j without authentication)
+
+import:
+  dirs:
+    - ../data                     # List of directories containing Histograph
+    - ...                         # datasets - used by import tool
+```
+
+Please see the [histograph-config](https://github.com/histograph/config) repository on GitHub to see the default options specified by `histograph.default.yml`.
 
 ### Core
 
@@ -131,17 +105,20 @@ Histograph Core reads messages from Redis, and syncs Neo4j and Elasticsearch.
     git clone https://github.com/histograph/core.git
     cd core
     npm install
-    node index.js -q histograph \
-      --config path/to/schemas/graphmalizer/graphmalizer.config.json
+    node index.js
+
+You can specify the location of your configuration file by specifying its location using the `--config` argument, or by setting the `HISTOGRAPH_CONFIG` environment variable.
 
 ### API
 
-Histograph API exposes a search and dataset API, allows users to upload datasets, and writes messages to the Redis queue.
+Histograph API exposes a search API, as well as an API to upload and download datasets. The search API reads from Elasticsearch and Neo4j; the dataset API allows users to upload datasets, reads NDJSON files and writes messages to the Redis queue.
 
     git clone https://github.com/histograph/api.git
     cd api
     npm install
     node index.js
+
+API can also be started with the `--config` command line argument.
 
 Afterwards, the API will be available on [http://localhost:3000](http://localhost:3000).
 
@@ -162,7 +139,42 @@ To use Histograph Data to download and compile a default set of Histograph NDJSO
 
 ### Import data
 
+With [histograph-import](https://github.com/histograph/import) you can upload local Histograph datasets to a remote (or local) instance of Histograph API. The import tool looks inside all directories specified by `config.import.dirs`. Datasets must follow the Histograph dataset naming convention:
+
+- One dataset per directory;
+- Each directory contains must contain a dataset JSON file, and a PITs or relations NDJSON file (or both):
+  - `dataset1/dataset1.dataset.json`
+  - `dataset1/dataset1.pits.ndjson`
+  - `dataset1/dataset1.relations.ndjson`
+
+For example, the GeoNames dataset looks like this:
+
+  - `geonames/geonames.dataset.json`
+  - `geonames/geonames.pits.ndjson`
+  - `geonames/geonames.relations.ndjson`
+
+To download and run histograph-import, do the following:
+
     git clone https://github.com/histograph/import.git
     cd import
     npm install
-    node index.js tgn geonames
+    node index.js tgn geonames ...
+
+Without specifying one or more datasets as command line arguments, running `node indes.js` will import _all_ available datasets.
+
+## Custom ontology and schemas
+
+By default, the [`histograph-schemas`](https://github.com/histograph/schemas) module (and it's [RDF ontology](https://github.com/histograph/schemas/blob/master/ontology/histograph.ttl)) is used to generate the JSON schemas and Graphmalizer configuration files needed by Histograph.
+
+You can create your own ontology and specify your own PIT types and relations, by cloning the histograph-schemas repository:
+
+    git clone https://github.com/histograph/schemas
+    cd schemas
+    npm install
+
+The most important file in this repository is `histograph.ttl`, the Histograph ontology. This file contains all types and relations used by Histograph Core, API and import scripts. You can edit the ontology and add your own types and relations, and run `node schemas-from-ontology.js` afterwards to create JSON schemas from the changed ontology. Finally, you will need to specify the absolute path to the `index.js` file in the cloned repository in your user configuration YAML file:
+
+```yml
+schemas:
+  module: path/to/custom-schemas-repository/index.js
+```
