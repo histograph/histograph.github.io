@@ -56,7 +56,7 @@ With Homebrew, this file is located here:
 Download `default-mapping.json` from GitHub, and copy the file:
 
 {% highlight bash %}
-wget https://raw.githubusercontent.com/histograph/schemas/graphmalizer/elasticsearch/default-mapping.json
+wget https://raw.githubusercontent.com/histograph/schemas/master/elasticsearch/default-mapping.json
 mv default-mapping.json /usr/local/Cellar/elasticsearch/:version/config
 {% endhighlight %}
 
