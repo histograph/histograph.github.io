@@ -19,7 +19,11 @@ This document explains how to install and configure all the essential components
 
 ### Histograph Neo4j plugin
 
-Histograph depends on a [server plugin](https://github.com/histograph/neo4j-plugin) for some of its graph queries. You can install this plugin like this:
+Histograph depends on a [server plugin](https://github.com/histograph/neo4j-plugin) for some of its graph queries. Before downloading and building the plugin, we need to tell Neo4j to create a `/histograph` endpoint. Open `neo4j-server.properties`, and add the following line:
+
+    org.neo4j.server.thirdparty_jaxrs_classes=org.waag.histograph.plugins=/histograph
+
+Afterwards, ou can install this plugin like this:
 
 {% highlight bash %}
 git clone https://github.com/histograph/neo4j-plugin.git
@@ -27,13 +31,9 @@ cd neo4j-plugin
 ./install.sh
 {% endhighlight %}
 
-This script is for OSX, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j.
+This script is for MacOS, on other systems, run `mvn package` yourself to build the Neo4j plugin, copy the resulting JAR file to Neo4j's plugin directory, and restart Neo4j.
 
-In a Debian install, the plugin directory is at:
-
-{% highlight bash %}
-/usr/share/neo4j
-{% endhighlight %}
+In a Debian install, the plugin directory is located at `/usr/share/neo4j`.
 
 ## Elasticsearch
 
@@ -89,7 +89,7 @@ This configuration file should at least specify the following options:
 
 {% highlight yaml %}
 api:
-  dataDir: /etc/histograph/data   # Directory where API stores data files.
+  dataDir: /var/histograph/data   # Directory where API stores data files.
   admin:
     name: histograph              # Default Histograph user, is created
     password: passw🚜rd           # when starting API the first time.
