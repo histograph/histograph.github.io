@@ -23,7 +23,7 @@ Histograph depends on a [server plugin](https://github.com/histograph/neo4j-plug
 
     org.neo4j.server.thirdparty_jaxrs_classes=org.waag.histograph.plugins=/histograph
 
-Afterwards, ou can install this plugin like this:
+Afterwards, you can install this plugin like this:
 
     git clone https://github.com/histograph/neo4j-plugin.git
     cd neo4j-plugin
@@ -162,7 +162,7 @@ To download and run histograph-import, do the following:
     npm install
     node index.js tgn geonames ...
 
-Without specifying one or more datasets as command line arguments, running `node indes.js` will import _all_ available datasets.
+Without specifying one or more datasets as command line arguments, running `node index.js` will import _all_ available datasets.
 
 ## Custom ontology and schemas
 
