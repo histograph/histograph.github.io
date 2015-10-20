@@ -17,6 +17,12 @@ This document explains how to install and configure all the essential components
 
     brew install neo4j
 
+You can check if Neo4j is installed properly by going to [http://localhost:7474](http://localhost:7474).
+
+For now, it is also necessary to manually create unique constraint and index, by running the following query in Neo4j Cypher console:
+
+    CREATE CONSTRAINT ON (n:_) ASSERT n.id IS UNIQUE
+
 ### Histograph Neo4j plugin
 
 Histograph depends on a [server plugin](https://github.com/histograph/neo4j-plugin) for some of its graph queries. Before downloading and building the plugin, we need to tell Neo4j to create a `/histograph` endpoint. Open `neo4j-server.properties`, and add the following line:
@@ -43,18 +49,7 @@ Install [Elasticsearch](https://www.elastic.co/downloads/elasticsearch). With Ho
 
 ### Configuration
 
-Currently, Histograph does not create its own mappings. Please put Histograph's `default-mapping.json` in  the `config` directory of your Elasticsearch installation.
-
-With Homebrew, this file is located here:
-
-    /usr/local/Cellar/elasticsearch/:version/config
-
-Download `default-mapping.json` from GitHub, and copy the file:
-
-    wget https://raw.githubusercontent.com/histograph/schemas/master/elasticsearch/default-mapping.json
-      mv default-mapping.json /usr/local/Cellar/elasticsearch/:version/config
-
-And, add the following lines to `elasticsearch.yml`:
+Add the following lines to `elasticsearch.yml`:
 
 {% highlight yaml %}
 index.analysis.analyzer.lowercase:
