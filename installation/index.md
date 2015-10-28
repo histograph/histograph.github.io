@@ -19,6 +19,10 @@ This document explains how to install and configure all the essential components
 
 You can check if Neo4j is installed properly by going to [http://localhost:7474](http://localhost:7474).
 
+On a debian or Ubuntu system neo4j can be (re)started with using the 'service' command:
+
+    sudo service neo4j-service (re)start
+
 For now, it is also necessary to manually create unique constraint and index, by running the following query in Neo4j Cypher console:
 
     CREATE CONSTRAINT ON (n:_) ASSERT n.id IS UNIQUE
