@@ -90,6 +90,8 @@ $bigger-margin: 2rem;
 body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 30px 0;
+  background-color: rgb(249, 249, 249);
+  color: rgb(63, 68, 68);
 }
 
 #logo {
@@ -121,12 +123,12 @@ table.no-borders tr.border-bottom {
   border-bottom: 1px solid black;
 }
 
-#architecure svg {
-  width: 960px;
+a, a:visited {
+  color: $link-color;
 }
 
-a {
-  color: $link-color;
+svg a, svg a:visited {
+  fill: $link-color;
 }
 
 a:hover {
@@ -194,6 +196,6 @@ nav #github-nav:hover {
   transition: opacity 0.5s ease-in-out;
 }
 
-body > div > div > p > a > img {
-  width: 822px;
+table {
+  width: 100%;
 }

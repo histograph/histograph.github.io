@@ -4,20 +4,5 @@
 - name: concepts
   title: Concepts
 
-- name: data
-  title: Data
-
 - name: viewer
   title: Viewer
-
-- name: installation
-  title: Installation
-
-- name: api
-  title: API
-
-- name: architecture
-  title: Architecture
-
-- name: apps
-  title: Apps
