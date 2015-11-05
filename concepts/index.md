@@ -20,7 +20,7 @@ __TODO:__ PITs, relations, concepts.
 
 ### API
 
-__TODO:__Search, geocoding. See GitHub.
+__TODO:__ Search, geocoding. See GitHub.
 
 ### Architecture
 
