@@ -15,6 +15,6 @@ The Histograph architecture diagram is made with Adobe Illustrator:
 
 However, SVGs exported by Illustrator are quite messy. Running `create-include-svg.svg` fixes font styles, and adds links to GitHub repositories:
 
-  - [`includes/architecture.svg`](includes/architecture.svg)
+  - [`_includes/architecture.svg`](_includes/architecture.svg)
 
 Copyright (C) 2015 [Waag Society](http://waag.org).
