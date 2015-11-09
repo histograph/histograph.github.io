@@ -6,4 +6,13 @@ To test locally, clone this repository, install [Jekyll](https://jekyllrb.com/),
 
     jekyll serve  --baseurl ''
 
+## Architecture diagram
+
+The Histograph architecture diagram is made with Adobe Illustrator:
+
+  - [`images/architecture.ai`](images/architecture.ai)
+  - [`images/architecture.svg`](images/architecture.svg)
+
+However, SVGs exported by Illustrator are quite messy. Running `create-include-svg.svg` fixes font styles, and adds links to GitHub repositories.
+
 Copyright (C) 2015 [Waag Society](http://waag.org).

@@ -86,7 +86,7 @@
 			H412.129c-4.213,0-7.629-3.416-7.629-7.629v-91.741c0-4.213,3.416-7.629,7.629-7.629h206.742c4.213,0,7.629,3.416,7.629,7.629
 			V385.871z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 207.3616 468.9424)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph</text>
+	<text transform="matrix(1 0 0 1 207.3616 468.9424)" fill="#3F3F3F" font-weight="600" font-size="22">Histograph</text>
 	<g>
 		<path fill="#F2F2F2" d="M439.5,228.871c0,4.213-3.416,7.629-7.629,7.629H283.13c-4.213,0-7.629-3.416-7.629-7.629V64.129
 			c0-4.213,3.416-7.629,7.629-7.629h148.741c4.213,0,7.629,3.416,7.629,7.629V228.871z"/>
@@ -118,7 +118,7 @@
 			c2.593,0,4.695,2.102,4.695,4.695V224.805z"/>
 	</g>
 	<text transform="matrix(1 0 0 1 287.9768 217.7637)" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Meta</text>
-	<text transform="matrix(1 0 0 1 285.2473 83.1436)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Dataset 1</text>
+	<text transform="matrix(1 0 0 1 285.2473 83.1436)" fill="#3F3F3F" font-weight="600" font-size="22">Dataset 1</text>
 	<g>
 		<path fill="#F2F2F2" d="M505.5,228.871c0,4.213-3.416,7.629-7.629,7.629h-29.742c-4.213,0-7.629-3.416-7.629-7.629V64.129
 			c0-4.213,3.416-7.629,7.629-7.629h29.742c4.213,0,7.629,3.416,7.629,7.629V228.871z"/>
@@ -151,7 +151,7 @@
 			M498.5,224.805c0,2.593-2.103,4.695-4.695,4.695h-22.609c-2.593,0-4.695-2.102-4.695-4.695v-27.61
 			c0-2.593,2.102-4.695,4.695-4.695h22.609c2.593,0,4.695,2.102,4.695,4.695V224.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 469.2864 83.1436)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">D2</text>
+	<text transform="matrix(1 0 0 1 469.2864 83.1436)" fill="#3F3F3F" font-weight="600" font-size="22">D2</text>
 	<g>
 		<path fill="#F2F2F2" d="M568.5,228.871c0,4.213-3.416,7.629-7.629,7.629h-29.742c-4.213,0-7.629-3.416-7.629-7.629V64.129
 			c0-4.213,3.416-7.629,7.629-7.629h29.742c4.213,0,7.629,3.416,7.629,7.629V228.871z"/>
@@ -184,7 +184,7 @@
 			M562.5,224.805c0,2.593-2.103,4.695-4.695,4.695h-22.609c-2.593,0-4.695-2.102-4.695-4.695v-27.61
 			c0-2.593,2.103-4.695,4.695-4.695h22.609c2.593,0,4.695,2.102,4.695,4.695V224.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 532.7668 83.1436)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">D3</text>
+	<text transform="matrix(1 0 0 1 532.7668 83.1436)" fill="#3F3F3F" font-weight="600" font-size="22">D3</text>
 	<g>
 		<path fill="#F2F2F2" d="M632.5,228.871c0,4.213-3.416,7.629-7.629,7.629h-29.742c-4.213,0-7.629-3.416-7.629-7.629V64.129
 			c0-4.213,3.416-7.629,7.629-7.629h29.742c4.213,0,7.629,3.416,7.629,7.629V228.871z"/>
@@ -217,7 +217,7 @@
 			M625.5,224.805c0,2.593-2.103,4.695-4.695,4.695h-22.609c-2.593,0-4.695-2.102-4.695-4.695v-27.61
 			c0-2.593,2.103-4.695,4.695-4.695h22.609c2.593,0,4.695,2.102,4.695,4.695V224.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 596.2473 83.1436)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">D4</text>
+	<text transform="matrix(1 0 0 1 596.2473 83.1436)" fill="#3F3F3F" font-weight="600" font-size="22">D4</text>
 	<g>
 		<path fill="#C6F7DE" d="M415.5,1558.805c0,2.593-2.102,4.695-4.695,4.695h-190.61c-2.593,0-4.695-2.103-4.695-4.695v-172.609
 			c0-2.593,2.102-4.695,4.695-4.695h190.61c2.593,0,4.695,2.103,4.695,4.695V1558.805z"/>
@@ -225,7 +225,7 @@
 			h-190.61c-2.593,0-4.695-2.103-4.695-4.695v-172.609c0-2.593,2.102-4.695,4.695-4.695h190.61c2.593,0,4.695,2.103,4.695,4.695
 			V1558.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 222.0081 1407.0352)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Neo4j Plugin</text>
+	<text transform="matrix(1 0 0 1 222.0081 1407.0352)" fill="#3F3F3F" font-weight="600" font-size="22">Neo4j Plugin</text>
 	<g>
 		<path fill="#C6F7DE" d="M642.5,1136.805c0,2.593-2.103,4.695-4.695,4.695H474.196c-2.593,0-4.695-2.103-4.695-4.695v-110.609
 			c0-2.593,2.102-4.695,4.695-4.695h163.609c2.593,0,4.695,2.102,4.695,4.695V1136.805z"/>
@@ -233,10 +233,10 @@
 			H474.196c-2.593,0-4.695-2.103-4.695-4.695v-110.609c0-2.593,2.102-4.695,4.695-4.695h163.609c2.593,0,4.695,2.102,4.695,4.695
 			V1136.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 479.8313 1051.0347)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Elasticsearch</text>
-	<text transform="matrix(1 0 0 1 215.0754 837.981)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph Core</text>
-	<text transform="matrix(1 0 0 1 212.0754 1658.3936)" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph API</text>
-	<text transform="matrix(1 0 0 1 212.0754 1808.9004)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph Viewer</text>
+	<text transform="matrix(1 0 0 1 479.8313 1051.0347)" fill="#3F3F3F" font-weight="600" font-size="22">Elasticsearch</text>
+	<text transform="matrix(1 0 0 1 215.0754 837.981)" fill="#3F3F3F" font-weight="600" font-size="22">Histograph Core</text>
+	<text transform="matrix(1 0 0 1 212.0754 1658.3936)" font-weight="600" font-size="22">Histograph API</text>
+	<text transform="matrix(1 0 0 1 212.0754 1808.9004)" fill="#3F3F3F" font-weight="600" font-size="22">Histograph Viewer</text>
 	<g>
 		<g>
 			
@@ -306,7 +306,7 @@
 			h-232.61c-2.593,0-4.695-2.103-4.695-4.695v-130.609c0-2.593,2.102-4.695,4.695-4.695h232.61c2.593,0,4.695,2.103,4.695,4.695
 			V1325.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 223.634 1215.0352)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Neo4j</text>
+	<text transform="matrix(1 0 0 1 223.634 1215.0352)" fill="#3F3F3F" font-weight="600" font-size="22">Neo4j</text>
 	<rect x="223.634" y="1230.387" fill="none" width="224.883" height="96.299"/>
 	<text transform="matrix(1 0 0 1 223.634 1244.9785)"><tspan x="0" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Graph database, con</tspan><tspan x="185.519" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">-</tspan><tspan x="0" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">taining PITs, relations </tspan><tspan x="0" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">between PITs, and equiv</tspan><tspan x="216.964" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">-</tspan><tspan x="0" y="69.12" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">alence classes.</tspan></text>
 	<g>
@@ -316,12 +316,12 @@
 			h-232.61c-2.593,0-4.695-2.103-4.695-4.695V935.195c0-2.593,2.102-4.695,4.695-4.695h232.61c2.593,0,4.695,2.102,4.695,4.695
 			V1136.805z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 222.0081 956.0347)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Graphmalizer</text>
+	<text transform="matrix(1 0 0 1 222.0081 956.0347)" fill="#3F3F3F" font-weight="600" font-size="22">Graphmalizer</text>
 	<rect x="223.634" y="970.387" fill="none" width="221.461" height="171.113"/>
 	<text transform="matrix(1 0 0 1 223.634 984.9785)"><tspan x="0" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Manages graph of PITs </tspan><tspan x="0" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">and relations, independ</tspan><tspan x="212.491" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">-</tspan><tspan x="0" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">ent of order of messag</tspan><tspan x="203.444" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">-</tspan><tspan x="0" y="69.12" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">es on queue. Creates </tspan><tspan x="0" y="92.16" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">equivalence classes for </tspan><tspan x="0" y="115.2" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">PITs in the same con</tspan><tspan x="183.607" y="115.2" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">-</tspan><tspan x="0" y="138.24" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">cept.</tspan></text>
 	<rect x="215.986" y="852.895" fill="none" width="316.782" height="70.795"/>
 	<text transform="matrix(1 0 0 1 215.9856 867.4863)"><tspan x="0" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Reads message queue, transforms </tspan><tspan x="0" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">and distributes messages to </tspan><tspan x="0" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Graphmalizer and Elasticsearch.</tspan></text>
-	<text transform="matrix(1 0 0 1 414.2737 311.0347)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph Import</text>
+	<text transform="matrix(1 0 0 1 414.2737 311.0347)" fill="#3F3F3F" font-weight="600" font-size="22">Histograph Import</text>
 	<rect x="414.274" y="322.387" fill="none" width="204.77" height="71.113"/>
 	<text transform="matrix(1 0 0 1 414.2737 336.979)"><tspan x="0" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Imports directory </tspan><tspan x="0" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">structure containing </tspan><tspan x="0" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">multiple datasets</tspan></text>
 	<g>
@@ -332,7 +332,7 @@
 				H262.129c-4.213,0-7.629-3.416-7.629-7.629v-98.741c0-4.213,3.416-7.629,7.629-7.629h341.742c4.213,0,7.629,3.416,7.629,7.629
 				V750.871z"/>
 		</g>
-		<text transform="matrix(1 0 0 1 261.3362 670.8267)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Redis</text>
+		<text transform="matrix(1 0 0 1 261.3362 670.8267)" fill="#3F3F3F" font-weight="600" font-size="22">Redis</text>
 		<g>
 			<g opacity="0.6">
 				<path fill="#C6F7DE" d="M371.808,745.892c0,1.559-1.275,2.834-2.834,2.834h-9.558c-1.559,0-2.834-1.275-2.834-2.834v-9.558
@@ -408,10 +408,10 @@
 			H212.129c-4.213,0-7.629-3.416-7.629-7.629v-88.741c0-4.213,3.416-7.629,7.629-7.629h436.742c4.213,0,7.629,3.416,7.629,7.629
 			V583.871z"/>
 	</g>
-	<text transform="matrix(1 0 0 1 215.1819 511.2578)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">Histograph IO</text>
+	<text transform="matrix(1 0 0 1 215.1819 511.2578)" fill="#3F3F3F" font-weight="600" font-size="22">Histograph IO</text>
 	<rect x="215.075" y="521.388" fill="none" width="434.425" height="70.112"/>
 	<text transform="matrix(1 0 0 1 215.0754 535.98)"><tspan x="0" y="0" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">Import and export of PITs and relations via </tspan><tspan x="0" y="23.04" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">HTTP. IO accepts NDJSON files, parses, checks </tspan><tspan x="0" y="46.08" fill="#3F3F3F" illustrator-font-family="'OpenSans'" font-size="19.2">and diffs them, and adds actions to queue.</tspan></text>
-	<text transform="matrix(1 0 0 1 702.9583 81.6543)" fill="#3F3F3F" illustrator-font-family="'OpenSans-Semibold'" font-size="22">GitHub repository:</text>
+	<text transform="matrix(1 0 0 1 702.9583 81.6543)" fill="#3F3F3F" font-weight="600" font-size="22">GitHub repository:</text>
 	
 		<text transform="matrix(1 0 0 1 702.9583 309.6689)" fill="#52BC85" illustrator-font-family="'OpenSans'" font-size="19.2" text-decoration=" underline"><a xlink:href="https://github.com/histograph/import">histograph/import</a></text>
 	
