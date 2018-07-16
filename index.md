@@ -18,9 +18,9 @@ Enter Histograph: a historical geocoder for search and standardization of place 
 
 #### About
 
-Histograph uses [Neo4j](http://neo4j.com/) and [Elasticsearch](https://www.elastic.co/products/elasticsearch) to expose a web of interlinked toponyms - in space and time. These are made searchable through an [API](https://api.histograph.io); and web applications enable geo-temporal search, visualization and analysis for librarians and archivists.
+Histograph uses [Neo4j](https://neo4j.com/) and [Elasticsearch](https://www.elastic.co/products/elasticsearch) to expose a web of interlinked toponyms - in space and time. These are made searchable through an [API](https://api.histograph.io); and web applications enable geo-temporal search, visualization and analysis for librarians and archivists.
 
-Histograph is part of [Erfgoed & Locatie](http://erfgoedenlocatie.nl/) (Heritage & Location), a cooperation of [DEN Foundation](http://www.den.nl/english), [Cultural Heritage Agency of the Netherlands](http://www.culturalheritageagency.nl/en), [Bibliotheek.nl](http://bibliotheek.nl/) and [Waag Society](http://waag.org/en).
+Histograph is part of [Erfgoed & Locatie](http://erfgoedenlocatie.nl/) (Heritage & Location), a cooperation of [DEN Foundation](http://www.den.nl/english), [Cultural Heritage Agency of the Netherlands](https://www.culturalheritageagency.nl/en), [Bibliotheek.nl](https://bibliotheek.nl/) and [Waag Society](https://waag.org/en).
 
 #### Getting started
 
