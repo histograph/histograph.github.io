@@ -1,6 +1,6 @@
 baseurl:
 
-highlighter: pygments
+highlighter: rouge
 
 defaults:
   -
